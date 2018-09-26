@@ -1,4 +1,4 @@
-package tricktactoe.tricktactoe;
+package tricktactoe;
 
 public class Move {
 

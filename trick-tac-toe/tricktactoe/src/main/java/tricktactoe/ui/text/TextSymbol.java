@@ -1,6 +1,6 @@
-package tricktactoe.tricktactoe.ui.text;
+package tricktactoe.ui.text;
 
-import tricktactoe.tricktactoe.Symbol;
+import tricktactoe.Symbol;
 
 public class TextSymbol implements Symbol<String> {
 

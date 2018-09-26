@@ -1,12 +1,11 @@
-package tricktactoe.tricktactoe.ui.text.test;
+package tricktactoe.test;
 
 import java.util.Vector;
 
-import tricktactoe.tricktactoe.Board;
-import tricktactoe.tricktactoe.Player;
-import tricktactoe.tricktactoe.ui.text.TextSymbol;
+import tricktactoe.Board;
+import tricktactoe.Player;
 
-public class TextBoardTest {
+public class BoardTest {
 
     public static void main(String[] args) {
         Vector<Board> boards = new Vector<Board>();
@@ -14,7 +13,7 @@ public class TextBoardTest {
         boards.add(buildAlternateBoard(3, 3, 1));
         boards.add(buildAlternateBoard(2, 2, 3));
         boards.add(buildHWinningBoard(3, 3, 2));
-        boards.add(buildHWinningBoard(4, 10, 4));
+        boards.add(buildHWinningBoard(10, 4, 4));
         for (Board b : boards) {
             System.out.println("Board: \n" + b.toString());
             if (b.hasWinner()) {
@@ -27,7 +26,7 @@ public class TextBoardTest {
     private static Board buildAlternateBoard(int rows, int cols, int numOfPlayers) {
         Player[] players = new Player[numOfPlayers];
         for (int p = 0; p < numOfPlayers; p++) {
-            players[p] = new Player("P" + p, new TextSymbol(String.valueOf(p)));
+            players[p] = new Player("P" + p, null);
         }
         Board board = new Board(rows, cols);
         int playerTurn = 0;
@@ -42,7 +41,7 @@ public class TextBoardTest {
     private static Board buildHWinningBoard(int rows, int cols, int numOfPlayers) {
         Player[] players = new Player[numOfPlayers];
         for (int p = 0; p < numOfPlayers; p++) {
-            players[p] = new Player("P" + p, new TextSymbol(String.valueOf(p)));
+            players[p] = new Player("P" + p, null);
         }
         Board board = new Board(rows, cols);
 

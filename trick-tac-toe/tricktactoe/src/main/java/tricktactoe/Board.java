@@ -1,10 +1,10 @@
-package tricktactoe.tricktactoe;
+package tricktactoe;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Vector;
 
-import tricktactoe.tricktactoe.exceptions.InvalidMoveException;
+import tricktactoe.exceptions.InvalidMoveException;
 
 public class Board {
 

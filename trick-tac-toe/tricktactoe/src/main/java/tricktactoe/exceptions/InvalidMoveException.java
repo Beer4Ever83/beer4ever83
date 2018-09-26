@@ -1,4 +1,4 @@
-package tricktactoe.tricktactoe.exceptions;
+package tricktactoe.exceptions;
 
 public class InvalidMoveException extends RuntimeException {
 
