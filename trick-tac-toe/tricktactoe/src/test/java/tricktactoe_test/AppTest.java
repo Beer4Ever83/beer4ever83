@@ -1,4 +1,4 @@
-package tricktactoe.tricktactoe;
+package tricktactoe_test;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

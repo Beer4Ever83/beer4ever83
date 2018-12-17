@@ -1,4 +1,4 @@
-package tricktactoe.test;
+package tricktactoe_test;
 
 import java.util.Vector;
 

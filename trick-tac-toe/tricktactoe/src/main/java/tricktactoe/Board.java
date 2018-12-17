@@ -105,6 +105,17 @@ public class Board {
 
     public String toString() {
         String out = "";
+        int maxlen = 0;
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                Player player = elementAt(r, c).getPlayer();
+                if (null != player && null != player.getPlaceholder()) {
+                    int newlen = player.getPlaceholder().toString().length();
+                    if (newlen > maxlen)
+                        maxlen = newlen;
+                }
+            }
+        }
         for (int r = 0; r < rows; r++) {
             for (int c = 0; c < cols; c++) {
                 Player player = elementAt(r, c).getPlayer();
@@ -116,7 +127,8 @@ public class Board {
                         placeholder = player.getName().toString();
                     }
                 }
-                out += placeholder;
+                String paddedPlaceholder = String.format("%-" + maxlen + "s", placeholder);
+                out += paddedPlaceholder;
                 if (c + 1 < cols)
                     out += "|";
             }
